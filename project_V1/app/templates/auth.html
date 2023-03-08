@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+    <div class="d-flex flex-wrap justify-content-around">
+        <form action="/registro/usuario" method="post" class="col-5 mx-auto border p-5 my-5 text-light bg-dark">
+            <h2 class="text-info">Registro</h2>
+            <div class="mb-3">
+                <label for="first_name" class="form-label">Nombre</label>
+                <input type="text" name="first_name" class="form-control" id="first_name" required placeholder="Ejemplo: Luke">
+            </div>
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Apellido</label>
+                <input type="text" name="last_name" class="form-control" id="last_name" required placeholder="Ejemplo: Skywalker">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="email" required placeholder="Ejemplo: skywalker@mail.com">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password" required placeholder="**************">
+            </div>
+            <div class="mb-3">
+                <label for="confirm_password" class="form-label">Confirmar Password</label>
+                <input type="password" name="confirm_password" class="form-control" id="confirm_password" required placeholder="***********">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-info btn-outline-primary">Enviar</button>
+            </div>
+        </form>
+
+
+        <!-- formulario login -->
+        <form action="/login" method="post" class="col-5 mx-auto border p-5 my-5 text-light bg-dark">
+            <h2 class="text-info">Login</h2>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" class="form-control" id="email" required placeholder="Ejemplo: skywalker@mail.com">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password" required placeholder="***********">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-info btn-outline-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
